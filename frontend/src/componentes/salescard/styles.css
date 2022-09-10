@@ -68,3 +68,8 @@
 .dsmeta-sales-table tbody tr:nth-child(odd) {
     background-color: #242c3b;
 }
+
+.dsmeta-red-btn-container {
+    display: flex;
+    justify-content: center;
+}
