@@ -3,19 +3,20 @@ import { BASE_URL } from '../../utils/request';
 import axios from "axios";
 
 import './styles.css'
+import { toast } from 'react-toastify';
 
 type Props = {
     saleId: number;
 }
 
-function handleClick(id:number) {
+function handleClick(id: number) {
     axios(`${BASE_URL}/sales/${id}/notification`)
-    .then(response => {
-
-    })
+        .then(response => {
+            toast.info("SMS enviado com sucesso.");
+        })
 }
 
-function NotifyButton({saleId} : Props) {
+function NotifyButton({ saleId }: Props) {
 
     return (
         <>
